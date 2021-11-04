@@ -21,7 +21,7 @@ export function Header() {
       <button type="button" onClick={handleOpenNewTransactionModal}
       >Nova Transação</button>
 
-      <Modal isOpen={isNewTransactionModalOpen}>
+      <Modal isOpen={isNewTransactionModalOpen} onRequestClose={handleCloseNewTransactionModal}>
         <h2>Cadastrar Transação</h2>
       </Modal>
       </Content>
