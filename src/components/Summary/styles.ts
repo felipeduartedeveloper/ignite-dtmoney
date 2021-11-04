@@ -5,6 +5,7 @@ export const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: -10rem;
+  
 
   div {
     background: var(--shape);
@@ -24,6 +25,7 @@ export const Container = styled.div`
       font-size: 2rem;
       font-weight: 500;
       line-height: 3rem;
+      margin-bottom: 2rem;
     }
 
     &.highlight-background {
