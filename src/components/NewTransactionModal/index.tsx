@@ -3,6 +3,7 @@ import entradaImg from '../../assets/entradas.svg';
 import saidaImg from '../../assets/saidas.svg';
 import { Container, TransactionTypeContainer } from './styles';
 import closeImg from '../../assets/close.svg';
+import { useState } from 'react';
 
 interface NewTransactionModalProps {
   isOpen: boolean;
@@ -10,6 +11,8 @@ interface NewTransactionModalProps {
 }
 
 export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModalProps) {
+  const [type, setType] = useState('')
+
   return (
     <Modal 
     isOpen={isOpen} 
