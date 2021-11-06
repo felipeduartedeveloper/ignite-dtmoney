@@ -1,8 +1,8 @@
 
   
-<p align="center">
-<h1>dt Money<h1/>
-</p>
+
+<h1 align="center">dt Money<h1/>
+
 <h3 align="center">Gerenciador de finanças</h3>
 
 <small align="center">:thought_balloon: “Controle as Finanças Pessoais.”</small><br/>
