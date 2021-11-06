@@ -4,7 +4,7 @@ import entradaImg from '../../assets/entradas.svg';
 import saidaImg from '../../assets/saidas.svg';
 import { Container, TransactionTypeContainer, RadioBox } from './styles';
 import closeImg from '../../assets/close.svg';
-import { api } from '../../services/api';
+
 import { TransactionsContext } from '../../TransactionsContext';
 
 
@@ -21,15 +21,21 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
   const [category, setCategory] = useState('');
   const [type, setType] = useState('')
 
-  function handleCreateNewTransaction(event: FormEvent) {
+  async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
 
-    createTransaction({
+    await createTransaction({
       title, 
       amount,
       category, 
       type,
     })
+
+    setTitle('');
+    setAmount(0);
+    setCategory('');
+    setType('deposit');
+    onRequestClose();
   }
 
   return (
@@ -64,8 +70,8 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
       <TransactionTypeContainer>
         <RadioBox
         type="button" 
-        onClick={() => {setType('deposito'); }}
-        isActive={type === 'deposito'}
+        onClick={() => {setType('deposit'); }}
+        isActive={type === 'deposit'}
         activeColor="green"
         >
           <img src={entradaImg} alt="Entrada"/>
@@ -74,8 +80,8 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
 
         <RadioBox
         type="button" 
-        onClick={() => {setType('saque'); }}
-        isActive={type === 'saque'}
+        onClick={() => {setType('withdraw'); }}
+        isActive={type === 'withdraw'}
         activeColor="red"
         >
           <img src={saidaImg} alt="Saída"/>
