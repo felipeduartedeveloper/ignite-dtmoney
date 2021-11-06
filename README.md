@@ -1,7 +1,7 @@
 
   
 <p align="center">
-  <img alt="GitHubExplore" title="dt Money" src="https://user-images.githubusercontent.com/26680031/80775470-17ae1180-8b36-11ea-940a-929b8a0bf9f8.png" width="400px" />
+  <img alt="dt Money" title="dt Money" src="https://user-images.githubusercontent.com/26680031/80775470-17ae1180-8b36-11ea-940a-929b8a0bf9f8.png" width="400px" />
 </p>
 <h3 align="center">Gerenciador de finanças</h3>
 
